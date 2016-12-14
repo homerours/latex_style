@@ -8,5 +8,4 @@ function tex_tpl() {
 	cp latex_style/gitignore ./.gitignore;
 }
 ```
-
-1. Run `tex_tpl <document-name>`
+2. Run `tex_tpl <document-name>`
