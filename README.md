@@ -1,6 +1,6 @@
 # My LaTeX template
 
-1. Add the following bash function to your bashrc
+- Add the following bash function to your bashrc
 ```sh
 function tex_tpl() {
 	git clone https://github.com/homerours/latex_style.git;
@@ -8,4 +8,5 @@ function tex_tpl() {
 	cp latex_style/gitignore ./.gitignore;
 }
 ```
-2. Run `tex_tpl <document-name>`
+
+- Run `tex_tpl <document-name>`
