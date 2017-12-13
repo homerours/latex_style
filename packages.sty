@@ -6,11 +6,14 @@
 \usepackage{epsfig}
 \usepackage{latexsym} % symbols
 \usepackage[english]{babel}
+%\usepackage[french]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{mathtools}
 \usepackage{enumerate}
 \usepackage{xcolor}
 \usepackage{lmodern}
+
+\usepackage[mono=false]{libertine}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%   TEST IF BEAMER   %%%%%%%%
@@ -28,19 +31,34 @@
 	\usepackage[a4paper,vmargin={2.4cm,2.8cm},hmargin={2.4cm,2.4cm}]{geometry}
 	\usepackage[labelfont={bf}, margin=1cm]{caption}
 	% Hyperrefs
-	\usepackage[pdfpagemode=UseNone,bookmarksopen=false,colorlinks=true,urlcolor=blue,citecolor=blue,citebordercolor=blue,linkcolor=blue]{hyperref}
+	\usepackage[pdfpagemode=UseNone,bookmarksopen=false,colorlinks=true,urlcolor=blue,citecolor=magenta,citebordercolor=blue,linkcolor=blue]{hyperref}
 	% Biblio
 	\usepackage[nottoc, notlof, notlot]{tocbibind}
 	% Theorems
+	\usepackage{lipsum,etoolbox}
 	\usepackage{thmtools}
-	\declaretheorem[thmbox=L,name=Theorem]{theorem}
-	\declaretheorem[name=Proposition,thmbox=M,numberlike=theorem]{proposition}
-	\declaretheorem[name=Lemma,thmbox=S,numberlike=theorem]{lemma}
-	\declaretheorem[name=Definition,thmbox=M,numberlike=theorem]{definition}
-	\declaretheorem[name=Corollary,thmbox=M,numberlike=theorem]{corollary}
-	\declaretheorem[name=Conjecture,thmbox=M,numberlike=theorem]{conjecture}
+	\@ifpackagewith{babel}{french}{%
+		\declaretheorem[thmbox=L,name=Théorème]{theorem}
+		\declaretheorem[name=Proposition,thmbox=M]{proposition}
+		\declaretheorem[name=Lemme,thmbox=S]{lemma}
+		\declaretheorem[name=Définition,thmbox=M]{definition}
+		\declaretheorem[name=Corollaire,thmbox=M]{corollary}
+		\declaretheorem[name=Conjecture,thmbox=S]{conjecture}
+		% Proofs
+		\renewenvironment{proof}[1][\unskip]{\noindent\textbf{Preuve #1.} }{\hfill$\square$}
+		}{%
+		\declaretheorem[thmbox=L,name=Theorem]{theorem}
+		\declaretheorem[name=Proposition,thmbox=M]{proposition}
+		\declaretheorem[name=Lemma,thmbox=S]{lemma}
+		\declaretheorem[name=Definition,thmbox=M]{definition}
+		\declaretheorem[name=Corollary,thmbox=M]{corollary}
+		\declaretheorem[name=Conjecture,thmbox=S]{conjecture}
+		% Proofs
+		\renewenvironment{proof}[1][\unskip]{\noindent\textbf{Proof #1.} }{\hfill$\square$}
+	}
+	%Extra space around theorems
+	\BeforeBeginEnvironment{theorem}{\vspace{6pt}}
+	\AfterEndEnvironment{theorem}{\vspace{6pt}}
 
-	% Proofs
-	\renewenvironment{proof}[1][\unskip]{\noindent\textbf{Proof #1.} }{\hfill$\square$}
 }%
 \makeatother%
