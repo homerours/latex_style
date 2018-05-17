@@ -60,5 +60,18 @@
 	\BeforeBeginEnvironment{theorem}{\vspace{6pt}}
 	\AfterEndEnvironment{theorem}{\vspace{6pt}}
 
+	%Appendices
+	\usepackage{titlesec}
+	\makeatletter
+	\newcommand{\setappendix}{Appendix~\thesection:~~}
+	\newcommand{\setsection}{\thesection~~}
+	\titleformat{\section}{\bfseries\LARGE}{%
+		\ifnum\pdfstrcmp{\@currenvir}{appendices}=0
+			\setappendix
+		\else
+			\setsection
+	\fi}{0em}{}
+	\makeatother
+	\usepackage[titletoc]{appendix}
 }%
 \makeatother%
