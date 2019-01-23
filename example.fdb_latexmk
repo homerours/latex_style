@@ -1,0 +1,12 @@
+# Fdb version 3
+["pdflatex"] 1548286233 "example.tex" "example.pdf" "example" 1548286233
+  "/usr/share/texmf-dist/tex/latex/base/article.cls" 1543696176 19823 fcbc01552b07b608574cbf8e1977e0c0 ""
+  "/usr/share/texmf-dist/tex/latex/base/size10.clo" 1543696176 8294 b0f177401f895563eb19304d2389582d ""
+  "/usr/share/texmf-dist/web2c/texmf.cnf" 1543696176 33301 a3134070eacafb10b1f371612ce2650d ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1547759169 7910428 bee9e5106d0f5b48f0a710aedf42e347 ""
+  "example.aux" 1548286188 8 a94a2480d3289e625eea47cd1b285758 ""
+  "example.tex" 1548286232 241 27432d890782479270ec2eb1592242f6 ""
+  "latex_style/packages.sty" 0 -1 0 ""
+  (generated)
+  "example.pdf"
+  "example.log"

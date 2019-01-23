@@ -37,6 +37,7 @@
 \def\Pois{\text{Pois}}
 \def\Bin{\text{Bin}}
 \def\Ber{\text{Ber}}
+\def\Unif{\text{Unif}}
 
 % Double brackets
 \def\llbracket{[\hspace{-.10em} [ }
@@ -44,6 +45,22 @@
 
 % Math-bold
 \newcommand{\bbf}[1]{\mathbf{#1}}
+
+% hat
+\newcommand{\what}[1]{\widehat{#1}}
+
+% widebar
+\DeclareFontFamily{U}{mathx}{\hyphenchar\font45}
+\DeclareFontShape{U}{mathx}{m}{n}{<-> mathx10}{}
+\DeclareSymbolFont{mathx}{U}{mathx}{m}{n}
+\DeclareMathAccent{\widebar}{0}{mathx}{"73}
+
+% def eq
+\newcommand{\defeq}{\overset{\rm def}{=}}
+
+% Argmin, argmax
+\DeclareMathOperator{\argmax}{arg\,max}
+\DeclareMathOperator{\argmin}{arg\,min}
 
 % Ceil and Floor
 \DeclarePairedDelimiter\ceil{\lceil}{\rceil}

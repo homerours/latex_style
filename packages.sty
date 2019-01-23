@@ -44,6 +44,7 @@
 		\declaretheorem[name=Définition,thmbox=M]{definition}
 		\declaretheorem[name=Corollaire,thmbox=M]{corollary}
 		\declaretheorem[name=Conjecture,thmbox=S]{conjecture}
+		\declaretheorem[name=Remarque]{remark}
 		% Proofs
 		\renewenvironment{proof}[1][\unskip]{\noindent\textbf{Preuve #1.} }{\hfill$\square$}
 		}{%
@@ -53,12 +54,22 @@
 		\declaretheorem[name=Definition,thmbox=M]{definition}
 		\declaretheorem[name=Corollary,thmbox=M]{corollary}
 		\declaretheorem[name=Conjecture,thmbox=S]{conjecture}
+		\declaretheorem[name=Remark]{remark}
 		% Proofs
 		\renewenvironment{proof}[1][\unskip]{\noindent\textbf{Proof #1.} }{\hfill$\square$}
 	}
 	%Extra space around theorems
 	\BeforeBeginEnvironment{theorem}{\vspace{6pt}}
 	\AfterEndEnvironment{theorem}{\vspace{6pt}}
+
+	%Thm numbering
+	\numberwithin{theorem}{section}
+	\numberwithin{proposition}{section}
+	\numberwithin{lemma}{section}
+	\numberwithin{definition}{section}
+	\numberwithin{corollary}{section}
+	\numberwithin{conjecture}{section}
+	\numberwithin{remark}{section}
 
 	%Appendices
 	\usepackage{titlesec}
