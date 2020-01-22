@@ -13,17 +13,37 @@
 \newcommand{\cZ}{\mathcal{Z}}
 \newcommand{\cD}{\mathcal{D}}
 \newcommand{\cB}{\mathcal{B}}
+\newcommand{\cG}{\mathcal{G}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cK}{\mathcal{K}}
+\newcommand{\cL}{\mathcal{L}}
 
 % Trace and Variance
 \def\Tr{{{\rm Tr}}}
 \def\Var{{{\rm Var}}}
 \def\Cov{{{\rm Cov}}}
 
+% Linear algebra
+\def\Span{{{\rm Span}}}
+\def\dim{{{\rm dim}}}
+\def\Ker{{{\rm Ker}}}
+\def\Im{{{\rm Im}}}
+\def\Id{{{\rm Id}}}
+\def\rank{{{\rm rank}}}
+\def\Sp{{{\rm Sp}}}
+\def\Diag{{{\rm Diag}}}
+
+
 % Mean-square errors
 \def\MMSE{{{\rm MMSE}}}
 \def\MSE{{{\rm MSE}}}
 \def\DMSE{{{\rm DMSE}}}
 \def\mmse{{{\rm mmse}}}
+\def\overlap{{{\rm Overlap}}}
 
 % Probability
 \renewcommand{\P}{\mathbb{P}}
@@ -44,7 +64,8 @@
 \def\rrbracket{ ] \hspace{-.10em}] }
 
 % Math-bold
-\newcommand{\bbf}[1]{\mathbf{#1}}
+%\newcommand{\bbf}[1]{\mathbf{#1}}
+\newcommand{\bbf}[1]{{\boldsymbol #1}}
 
 % hat
 \newcommand{\what}[1]{\widehat{#1}}
@@ -57,6 +78,8 @@
 
 % def eq
 \newcommand{\defeq}{\overset{\rm def}{=}}
+\newcommand*{\eqlaw}{\overset{{\rm (d)}}{=}}
+\newcommand*{\eqdist}{\overset{{\rm (d)}}{=}}
 
 % Argmin, argmax
 \DeclareMathOperator{\argmax}{arg\,max}
@@ -65,3 +88,20 @@
 % Ceil and Floor
 \DeclarePairedDelimiter\ceil{\lceil}{\rceil}
 \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+% Sign and Id
+\def\sign{{\rm sign}}
+\def\Id{{\rm Id}}
+
+% Indicator function
+\def\1{\mathds{1}}
+
+\DeclareMathOperator{\arctanh}{artanh}
+\def\sT{{\sf T}}
+
+%  Brackets
+\def\<{\langle}
+\def\>{\rangle}
+
+% Epsilon
+\def\eps{{\varepsilon}}
